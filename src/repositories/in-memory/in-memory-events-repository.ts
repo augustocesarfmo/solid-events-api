@@ -6,6 +6,13 @@ import { Event } from "../../types";
 export class InMemoryEventsRepository implements EventsRepository {
   private events: Event[] = [];
 
+  findById(id: string) {
+    throw new Error("Method not implemented.");
+  }
+  findMany(eventIdCursor?: string) {
+    throw new Error("Method not implemented.");
+  }
+
   create({ name }: { name: string }): Event {
     const event: Event = {
       id: randomUUID(),
