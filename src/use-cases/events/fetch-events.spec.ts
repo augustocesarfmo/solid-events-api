@@ -17,7 +17,7 @@ describe("Caso de Uso: Buscar Eventos", () => {
     await eventsRepository.create({ name: "Rifa de um caminhão" });
     await eventsRepository.create({ name: "Rifa de um celular" });
 
-    const { events } = await sut.;
+    const { events } = await sut.execute({});
 
     expect(events).toHaveLength(2);
   });
