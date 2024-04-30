@@ -1,5 +1,5 @@
-import { EventsRepository } from "../repositories/events-repository";
 import { Event, Prisma } from "@prisma/client";
+import { EventsRepository } from "../../repositories/events-repository";
 
 interface CreateEventUseCaseRequest extends Prisma.EventCreateInput {}
 

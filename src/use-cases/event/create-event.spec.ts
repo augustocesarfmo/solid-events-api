@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CreateEventUseCase } from "./create-event";
-import { InMemoryEventsRepository } from "../repositories/in-memory/in-memory-events-repository";
-import { PrismaEventsRepository } from "../repositories/prisma/prisma-events-repository";
+import { InMemoryEventsRepository } from "../../repositories/in-memory/in-memory-events-repository";
 
 describe("Caso de Uso: Criar Evento", () => {
   it("Deve ser possível criar um novo evento", async () => {
