@@ -1,21 +1,21 @@
 import { Event } from "@prisma/client";
 import { EventsRepository } from "../../repositories/events-repository";
 
-interface FetchEventUseCaseRequest {
+interface FetchEventsUseCaseRequest {
   eventIdCursor?: string;
 }
 
-interface FetchEventUseCaseResponse {
+interface FetchEventsUseCaseResponse {
   events: Event[];
 }
 
-export class FetchEventUseCase {
+export class FetchEventsUseCase {
   constructor(private eventsRepository: EventsRepository) {}
 
-  execute({
+  async execute({
     eventIdCursor,
-  }: FetchEventUseCaseRequest): FetchEventUseCaseResponse {
-    const events = this.eventsRepository.findMany(eventIdCursor);
+  }: FetchEventsUseCaseRequest): Promise<FetchEventsUseCaseResponse> {
+    const events = await this.eventsRepository.findMany(eventIdCursor);
 
     return {
       events,

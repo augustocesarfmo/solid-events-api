@@ -1,5 +1,7 @@
 import { Event } from "@prisma/client";
+
 import { EventsRepository } from "../../repositories/events-repository";
+import { ResourceNotFoundError } from "../errors/resource-not-found-error";
 
 interface GetEventUseCaseRequest {
   eventId: string;
@@ -18,7 +20,7 @@ export class GetEventUseCase {
     const event = await this.eventsRepository.findById(eventId);
 
     if (!event) {
-      throw new Error("Recurso não encontrado.");
+      throw new ResourceNotFoundError();
     }
 
     return {
