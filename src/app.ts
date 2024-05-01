@@ -2,6 +2,7 @@ import fastify from "fastify";
 import { ZodError } from "zod";
 
 import { eventsRoutes } from "./http/controllers/events/routes";
+import { ResourceNotFoundError } from "./use-cases/errors/resource-not-found-error";
 
 export const app = fastify();
 
@@ -12,6 +13,10 @@ app.setErrorHandler((error, _request, reply) => {
     return reply
       .status(400)
       .send({ message: "Validation error.", issues: error.format() });
+  }
+
+  if (error instanceof ResourceNotFoundError) {
+    return reply.status(404).send({ message: error.message });
   }
 
   if (process.env.NODE_ENV !== "production") {

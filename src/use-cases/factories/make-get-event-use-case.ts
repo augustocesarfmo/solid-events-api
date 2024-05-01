@@ -1,9 +1,9 @@
 import { PrismaEventsRepository } from "../../repositories/prisma/prisma-events-repository";
-import { CreateEventUseCase } from "../events/create-event";
+import { GetEventUseCase } from "../events/get-event";
 
-export function makeCreateEventUseCase() {
+export function makeGetEventUseCase() {
   const prismaEventsRepository = new PrismaEventsRepository();
-  const useCase = new CreateEventUseCase(prismaEventsRepository);
+  const useCase = new GetEventUseCase(prismaEventsRepository);
 
   return useCase;
 }
