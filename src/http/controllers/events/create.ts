@@ -1,16 +1,19 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { CreateEventUseCase } from "../../../use-cases/create-event";
-import { PrismaEventsRepository } from "../../../repositories/prisma/prisma-events-repository";
+import { z } from "zod";
+
+import { makeCreateSaleUseCase } from "../../../use-cases/factories/make-create-event-use-case";
+
+const bodySchema = z.object({
+  name: z.string(),
+});
 
 export async function create(request: FastifyRequest, reply: FastifyReply) {
-  const { name } = request.body;
+  // Valida os dados da requisição
+  const data = bodySchema.parse(request.body);
 
-  const prismaEventsRepository = new PrismaEventsRepository();
-  const createEventUseCase = new CreateEventUseCase(prismaEventsRepository);
+  const createEventUseCase = makeCreateSaleUseCase();
 
-  const { event } = await createEventUseCase.execute({
-    name,
-  });
+  const { event } = await createEventUseCase.execute(data);
 
   return reply.status(201).send(event);
 }
