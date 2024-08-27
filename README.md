@@ -1,8 +1,57 @@
-1. Implementar os Casos de Uso
-2. Conectar os Casos de Uso com a abstração do respectivo repositório
-3. Implementar os repositórios em memória e no banco de dados/Prisma
-4. Conectar os Controller com os Casos de Uso
+# SOLID Events API
 
-enviar requicao -> pegar requisicao no Controller -> passar os dados para
-o caso de uso (serviço) -> o serviço é executado e retorna algo ->
-pegamos o resultado e devolvemos para o client
+API REST Node.js que exemplifica a aplicação de Princípios e Padrões de Projetos no gerenciamento de `eventos`, com testes unitários e integração com um banco de dados PostgreSQL.
+
+**Princípios SOLID:**
+
+- Single Responsibility Principle (Princípio da Responsabilidade Única)
+- Interface Segregation Principle (Princípio da Segregação de Interface)
+- Dependency Inversion Principle (Princípio da Inversão de Dependência)
+
+**Padrões de Projetos**
+
+- Factory Pattern (Padrão de Fábrica)
+- Repository Pattern (Padrão de Repositório)
+
+## 🚀 Tecnologias
+
+Este projeto foi desenvolvido para portfólio com as seguintes tecnologias:
+
+- [typescript](https://www.typescriptlang.org/)
+- [fastify](https://fastify.dev/docs/v4.26.x/)
+- [docker](https://www.docker.com/)
+- [prisma](https://www.prisma.io/docs/getting-started)
+- [zod](https://zod.dev/)
+- [vitest](https://vitest.dev/guide/)
+
+## ℹ️ Executando
+
+Para clonar e executar este projeto, execute na sua linha de comando:
+
+```bash
+# Clonando este repositório
+$ git clone https://github.com/augustocesarfmo/solid-events-api.git
+
+# Acessando o repositório
+$ cd solid-events-api
+
+# Instalando as dependências
+$ npm install
+
+# Criando um banco de dados PostgreSQL com Docker
+$ docker compose up -d
+
+# Aplicando as migrações no banco de dados
+$ npx prisma migrate dev
+
+# Executando o app
+$ npm run dev
+```
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Consulte a [LICENÇA](https://github.com/augustocesarfmo/solid-events-api/blob/main/LICENSE.md) para obter mais informações.
+
+---
+
+by Augusto César Oliveira 👐🏼
