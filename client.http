@@ -1,0 +1,19 @@
+@base_url = http://localhost:3000
+
+// Listando os eventos
+GET {{base_url}}/events
+
+###
+
+// Criando um novo evento
+POST {{base_url}}/events
+content-type: application/json
+
+{
+  "name": "Evento 1"
+}
+
+###
+
+// Obtendo um evento
+GET {{base_url}}/events/758e8836-f2d8-4a78-b3e5-050ae23db2d2
