@@ -1,8 +1,8 @@
 # SOLID Events API
 
-API REST Node.js que exemplifica a aplicação de Princípios e Padrões de Projetos no gerenciamento de `eventos`, com testes unitários e integração com um banco de dados PostgreSQL.
+API REST Node.js que demonstra a aplicação de Princípios e Padrões de Projeto no gerenciamento de `eventos`, incluindo testes unitários e integração com um banco de dados PostgreSQL.
 
-**Princípios SOLID:**
+**Princípios de Projeto (SOLID):**
 
 - Single Responsibility Principle (Princípio da Responsabilidade Única)
 - Interface Segregation Principle (Princípio da Segregação de Interface)
@@ -38,7 +38,7 @@ $ cd solid-events-api
 # Instalando as dependências
 $ npm install
 
-# Criando um banco de dados PostgreSQL com Docker
+# Criando o banco de dados PostgreSQL da API com Docker
 $ docker compose up -d
 
 # Aplicando as migrações no banco de dados
