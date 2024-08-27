@@ -26,7 +26,9 @@ Este projeto foi desenvolvido para portfólio com as seguintes tecnologias:
 
 ## ℹ️ Executando
 
-Para clonar e executar este projeto, execute na sua linha de comando:
+Para clonar e executar este projeto, você precisará de [Git](https://git-scm.com), [Node.js v12.13](https://nodejs.org/) ou superior + [Docker v20.10](https://www.docker.com/) ou superior instalado no seu computador.
+
+Na sua linha de comando execute:
 
 ```bash
 # Clonando este repositório
