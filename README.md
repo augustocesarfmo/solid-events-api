@@ -1,6 +1,6 @@
 # SOLID Events API
 
-API REST Node.js que demonstra a aplicação de Princípios e Padrões de Projeto no gerenciamento de `eventos`, incluindo testes unitários e integração com um banco de dados PostgreSQL.
+API REST Node.js que demonstra a aplicação de Princípios e Padrões de Projeto para o gerenciamento de `eventos`, incluindo testes unitários e integração com um banco de dados PostgreSQL.
 
 **Princípios de Projeto (SOLID):**
 
