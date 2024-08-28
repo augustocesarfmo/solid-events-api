@@ -51,7 +51,7 @@ $ npm run dev
 
 # Consumindo a API
   1. Instale a extensão REST Client no VS Code;
-  2. Abra o arquivo './index.http';
+  2. Abra o arquivo './client.http';
   3. Clique em 'Send Request' em uma das rota.
 ```
 
